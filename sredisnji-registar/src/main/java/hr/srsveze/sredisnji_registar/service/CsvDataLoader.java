@@ -1,236 +1,237 @@
-// Smjestite u: src/main/java/hr/srsveze/sredisnji_registar/service/CsvDataLoader.java
-package hr.srsveze.sredisnji_registar.service; // Provjerite odgovara li ovo vašem paketu
+package hr.srsveze.sredisnji_registar.service;
 
 import hr.srsveze.sredisnji_registar.model.MaticaRodenihEntry;
 import hr.srsveze.sredisnji_registar.model.Osoba;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVRecord;
-import org.springframework.stereotype.Component;
-
-import jakarta.annotation.PostConstruct;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.Arrays; // Osigurajte da je ovaj import tu
 
-@Component
-public class CsvDataLoader {
-    // DATA folder je unutar korijenskog direktorija projekta
-    private static final String DATA_SUBDIRECTORY = "DATA";
+import static org.junit.jupiter.api.Assertions.*;
 
-    public List<MaticaRodenihEntry> maticaRodenihEntries = Collections.synchronizedList(new ArrayList<>());
-    public List<Map<String, String>> maticaVjencanihData = Collections.synchronizedList(new ArrayList<>());
-    public List<Map<String, String>> maticaUmrlihData = Collections.synchronizedList(new ArrayList<>());
-    public List<Map<String, String>> registarZivPartnerstvaData = Collections.synchronizedList(new ArrayList<>());
-    public List<Map<String, String>> izjavaIzvanbrZajData = Collections.synchronizedList(new ArrayList<>());
-    public List<Map<String, String>> stranciData = Collections.synchronizedList(new ArrayList<>());
+class CsvDataLoaderTest {
 
-    public Map<String, Osoba> centralniPopisOsoba = Collections.synchronizedMap(new HashMap<>());
+    private CsvDataLoader csvDataLoader;
 
-    private String getSafe(CSVRecord record, String headerName) {
-        // CSVParser je konfiguriran s .withIgnoreHeaderCase(true), ali za svaki slučaj provjeravamo.
-        // Ključno je da headerName ovdje točno odgovara onome što CSVParser vraća kao ključ u mapi headera.
-        // Ako CSVFormat.DEFAULT.builder().setHeader() pročita headere, oni postaju ključevi.
-        if (record.isMapped(headerName)) { // Bolja provjera nego getParser().getHeaderMap().containsKey()
-            String value = record.get(headerName);
-            return value != null ? value.trim() : "";
-        }
-        //System.out.println("Upozorenje: Header '" + headerName + "' nije pronađen za zapis: " + record.getRecordNumber() + " u datoteci koja se parsira.");
-        return "";
+    @BeforeEach
+    void setUp() {
+        // Instantiate CsvDataLoader. This will trigger @PostConstruct and initial loadAllData().
+        csvDataLoader = new CsvDataLoader();
+
+        // Clear all lists that might have been populated by the initial loadAllData()
+        // or will be used as input for our controlled tests.
+        csvDataLoader.maticaRodenihEntries.clear();
+        csvDataLoader.maticaVjencanihData.clear();
+        csvDataLoader.maticaUmrlihData.clear();
+        csvDataLoader.registarZivPartnerstvaData.clear();
+        csvDataLoader.izjavaIzvanbrZajData.clear();
+        csvDataLoader.stranciData.clear();
+        // Crucially, clear the map that kreirajCentralniPopisOsoba populates.
+        csvDataLoader.centralniPopisOsoba.clear();
     }
 
-    @PostConstruct
-    public void loadAllData() {
-        Path projectRoot = Paths.get("").toAbsolutePath();
-        Path dataDirPathObject = Paths.get(projectRoot.toString(), DATA_SUBDIRECTORY);
+    @Test
+    @DisplayName("Should populate centralniPopisOsoba from MaticaRodenih entries")
+    void testKreirajCentralniPopis_FromMaticaRodenih() {
+        // 1. Setup: Provide controlled data for maticaRodenihEntries
+        csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "00000000001", "Dijete Jedan", "Dijetić", "M", "01.01.2020",
+                "10000000001", "Majka Jedna", "Majić", 
+                "20000000001", "Otac Jedan", "Ocić"
+        ));
+        csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "00000000002", "Dijete Dva", "Drugić", "Ž", "02.02.2021",
+                "10000000001", "Majka Jedna", "Majić", // Same mother
+                "20000000002", "Otac Dva", "Dvić"
+        ));
+        // Add an entry with null OIBs for parents (should still process child)
+        csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "00000000003", "Dijete Tri", "Tretić", "M", "03.03.2022",
+                null, null, null, 
+                null, null, null 
+        ));
+        // Add an entry where child OIB is null (should be skipped by dodajOsobuUPopis)
+         csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                null, "Dijete Četiri", "Četvrtić", "Ž", "04.04.2023",
+                "10000000003", "Majka Tri", "Trstić", 
+                "20000000003", "Otac Tri", "Trstić"
+        ));
 
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("START: Učitavanje CSV datoteka iz: " + dataDirPathObject);
-        System.out.println("------------------------------------------------------------------");
-        try {
-            // Koristimo nove, kraće nazive datoteka
-            maticaRodenihEntries.addAll(loadMaticaRodenih("matica_rodjenih.csv"));
-            maticaVjencanihData.addAll(loadGenericCsv("Matica_vjenčanih.csv")); // Pazite na veliko/malo slovo u nazivu datoteke
-            maticaUmrlihData.addAll(loadGenericCsv("matica_umrlih.csv"));
 
-            List<Map<String, String>> rzpTemp = loadGenericCsv("registar životnog partnerstva.csv");
-            List<Map<String, String>> izpTemp = loadGenericCsv("izjava o životnom partnerstvu.csv");
+        // 2. Action: Call loadAllData() which will call the private kreirajCentralniPopisOsoba()
+        // This method will use the lists we manually populated above.
+        // We accept that loadAllData() might print warnings about missing CSV files
+        // as it will try to load them first, but that part is ignored for this test's assertions.
+        csvDataLoader.loadAllData(); // This re-runs the logic including kreirajCentralniPopisOsoba
 
-            if (!rzpTemp.isEmpty()) registarZivPartnerstvaData.addAll(rzpTemp);
-            if (!izpTemp.isEmpty()) registarZivPartnerstvaData.addAll(izpTemp);
-            if (!registarZivPartnerstvaData.isEmpty()) {
-                 registarZivPartnerstvaData = registarZivPartnerstvaData.stream().distinct().collect(Collectors.toList());
-                 System.out.println("INFO: Ukupno " + registarZivPartnerstvaData.size() + " zapisa u Registru/Izjavama živ. partnerstva (nakon spajanja i uklanjanja duplikata).");
-            } else {
-                 System.out.println("INFO: Nema zapisa za Registar živ. partnerstva / Izjave.");
-            }
+        // 3. Assertions
+        Map<String, Osoba> popis = csvDataLoader.centralniPopisOsoba;
+        // Corrected expected count:
+        // Child1 (001), Majka1 (101), Otac1 (201)
+        // Child2 (002), (Majka1 already there), Otac2 (202)
+        // Child3 (003), (Majka null, Otac null - not added)
+        // (Child4 null - not added), Majka3 (103), Otac3 (203)
+        // Total: 3 children + 2 parents from child1 + 1 parent from child2 + 2 parents from child4 = 8
+        assertEquals(8, popis.size(), "Should contain 3 children and 5 parents.");
 
-            izjavaIzvanbrZajData.addAll(loadGenericCsv("Izjava o izvanbračnoj zajednici.csv"));
-            stranciData.addAll(loadGenericCsv("Registar_stranaca.csv")); // Pazite na veliko/malo slovo
 
-            kreirajCentralniPopisOsoba();
-            System.out.println("INFO: Kreiran centralni popis s " + centralniPopisOsoba.size() + " jedinstvenih osoba.");
+        Osoba dijete1 = popis.get("00000000001");
+        assertNotNull(dijete1);
+        assertEquals("Dijete Jedan", dijete1.getIme());
+        assertEquals("Dijetić", dijete1.getPrezime());
+        assertEquals("M", dijete1.getSpol());
+        assertEquals("01.01.2020", dijete1.getDatumRodjenja());
 
-        } catch (IOException e) {
-            System.err.println("KRITIČNA GREŠKA prilikom učitavanja CSV datoteka: " + e.getMessage());
-            e.printStackTrace();
-        }
-        System.out.println("------------------------------------------------------------------");
-        System.out.println("ZAVRŠENO: Učitavanje CSV datoteka.");
-        System.out.println("------------------------------------------------------------------");
+        Osoba majka1 = popis.get("10000000001");
+        assertNotNull(majka1);
+        assertEquals("Majka Jedna", majka1.getIme());
+        assertEquals("Majić", majka1.getPrezime());
+        assertEquals("Ž", majka1.getSpol(), "Spol for mother should be Ž");
+
+        Osoba otac1 = popis.get("20000000001");
+        assertNotNull(otac1);
+        assertEquals("Otac Jedan", otac1.getIme());
+        assertEquals("Ocić", otac1.getPrezime());
+        assertEquals("M", otac1.getSpol(), "Spol for father should be M");
+        
+        Osoba dijete3 = popis.get("00000000003");
+        assertNotNull(dijete3, "Dijete 3 should be added even with null parents.");
+        assertEquals("Dijete Tri", dijete3.getIme());
+
+        assertNull(popis.get(null), "Should not add person with null OIB (child4).");
+        assertNull(popis.get(""), "Should not add person with empty OIB.");
+        
+        Osoba majka3 = popis.get("10000000003");
+        assertNotNull(majka3, "Majka Tri (from child 4) should be added.");
+        assertEquals("Majka Tri", majka3.getIme());
+
+        Osoba otac3 = popis.get("20000000003");
+        assertNotNull(otac3, "Otac Tri (from child 4) should be added.");
+        assertEquals("Otac Tri", otac3.getIme());
     }
 
-    private List<MaticaRodenihEntry> loadMaticaRodenih(String fileName) throws IOException {
-        List<MaticaRodenihEntry> entries = new ArrayList<>();
-        Path filePath = Paths.get(DATA_SUBDIRECTORY, fileName);
-        if (!Files.exists(filePath)) {
-            System.err.println("UPOZORENJE: Datoteka NIJE PRONAĐENA: " + filePath.toAbsolutePath());
-            return entries;
-        }
-        try (Reader reader = new InputStreamReader(Files.newInputStream(filePath), StandardCharsets.UTF_8);
-             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.builder()
-                     .setHeader()
-                     .setSkipHeaderRecord(true)
-                     .setIgnoreHeaderCase(true) // Ovo bi trebalo pomoći s razlikama u vel./malim slovima u headerima
-                     .setTrim(true)
-                     .setAllowMissingColumnNames(true)
-                     .setDelimiter(';') // DODANO: Vaše datoteke koriste točku-zarez kao delimiter
-                     .setIgnoreEmptyLines(true)
-                     .build())) {
-            for (CSVRecord csvRecord : csvParser) {
-                entries.add(new MaticaRodenihEntry(
-                    getSafe(csvRecord, "OIB djeteta"), getSafe(csvRecord, "Ime djeteta"), getSafe(csvRecord, "Prezime djeteta"),
-                    getSafe(csvRecord, "Spol djeteta"), getSafe(csvRecord, "Datum rođenja djeteta"),
-                    getSafe(csvRecord, "OIB majke"), getSafe(csvRecord, "Ime majke"), getSafe(csvRecord, "Prezime majke"),
-                    getSafe(csvRecord, "OIB oca"), getSafe(csvRecord, "Ime oca"), getSafe(csvRecord, "Prezime oca")
-                ));
-            }
-        }
-        System.out.println("INFO: Učitano " + entries.size() + " zapisa iz " + fileName);
-        return entries;
+    @Test
+    @DisplayName("Should populate centralniPopisOsoba from MaticaVjencanih")
+    void testKreirajCentralniPopis_FromMaticaVjencanih() {
+        // 1. Setup
+        Map<String, String> brak1 = new HashMap<>();
+        brak1.put("OIB muža", "30000000001");
+        brak1.put("Ime muža", "Muz Jedan");
+        brak1.put("Prezime muža", "Muzić");
+        brak1.put("Datum rođenja muža", "01.01.1980");
+        brak1.put("OIB žene", "40000000001");
+        brak1.put("Ime žene", "Zena Jedna");
+        brak1.put("Prezime žene", "Zenić");
+        brak1.put("Datum rođenja žene", "02.02.1982");
+        csvDataLoader.maticaVjencanihData.add(brak1);
+
+        // 2. Action
+        csvDataLoader.loadAllData();
+
+        // 3. Assertions
+        Map<String, Osoba> popis = csvDataLoader.centralniPopisOsoba;
+        assertEquals(2, popis.size(), "Should contain 2 persons from MaticaVjencanih.");
+
+        Osoba muz1 = popis.get("30000000001");
+        assertNotNull(muz1);
+        assertEquals("Muz Jedan", muz1.getIme());
+        assertEquals("Muzić", muz1.getPrezime());
+        assertEquals("M", muz1.getSpol());
+        assertEquals("01.01.1980", muz1.getDatumRodjenja());
+
+        Osoba zena1 = popis.get("40000000001");
+        assertNotNull(zena1);
+        assertEquals("Zena Jedna", zena1.getIme());
+        assertEquals("Zenić", zena1.getPrezime());
+        assertEquals("Ž", zena1.getSpol());
+        assertEquals("02.02.1982", zena1.getDatumRodjenja());
+    }
+    
+    @Test
+    @DisplayName("Should update datumSmrti from MaticaUmrlih")
+    void testKreirajCentralniPopis_UpdateDatumSmrti() {
+        // 1. Setup: Add an initial person via MaticaRodenih
+        csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "50000000001", "Osoba Umrla", "Pokojnić", "M", "01.01.1950",
+                null, null, null, null, null, null
+        ));
+        
+        // Add death record
+        Map<String, String> umrliZapis = new HashMap<>();
+        umrliZapis.put("OIB umrlog", "50000000001");
+        umrliZapis.put("Datum smrti", "31.12.2020");
+        csvDataLoader.maticaUmrlihData.add(umrliZapis);
+
+        // 2. Action
+        csvDataLoader.loadAllData();
+
+        // 3. Assertions
+        Map<String, Osoba> popis = csvDataLoader.centralniPopisOsoba;
+        assertEquals(1, popis.size());
+        Osoba umrlaOsoba = popis.get("50000000001");
+        assertNotNull(umrlaOsoba);
+        assertEquals("Osoba Umrla", umrlaOsoba.getIme());
+        assertEquals("31.12.2020", umrlaOsoba.getDatumSmrti(), "Datum smrti should be updated.");
     }
 
-    private List<Map<String, String>> loadGenericCsv(String fileName) throws IOException {
-        List<Map<String, String>> data = new ArrayList<>();
-        Path filePath = Paths.get(DATA_SUBDIRECTORY, fileName);
-         if (!Files.exists(filePath)) {
-            System.err.println("UPOZORENJE: Datoteka NIJE PRONAĐENA: " + filePath.toAbsolutePath());
-            return data;
-        }
-        try (Reader reader = new InputStreamReader(Files.newInputStream(filePath), StandardCharsets.UTF_8);
-             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.builder()
-                     .setHeader().setSkipHeaderRecord(true).setIgnoreHeaderCase(true)
-                     .setTrim(true).setAllowMissingColumnNames(true).setDelimiter(';') // DODANO
-                     .setIgnoreEmptyLines(true).build())) {
-            for (CSVRecord csvRecord : csvParser) {
-                data.add(new HashMap<>(csvRecord.toMap()));
-            }
-        }
-        System.out.println("INFO: Učitano " + data.size() + " zapisa iz " + fileName);
-        return data;
-    }
+    @Test
+    @DisplayName("dodajOsobuUPopis - should update existing person with new details")
+    void testDodajOsobuUPopis_UpdatesExisting() {
+        // 1. Setup: Add an initial minimal person
+        csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "60000000001", "Prvo Ime", "", "M", "", // OIB, Ime, Prazno Prezime, Spol, Prazan DatumRodjenja
+                null, null, null, null, null, null
+        ));
+        csvDataLoader.loadAllData(); // Initial load to populate from maticaRodenihEntries
 
-    private String getSafeMap(Map<String, String> map, String key) {
-        // Prvo pokušaj s točnim ključem
-        String value = map.get(key);
-        // Ako nije pronađeno, pokušaj s ključem bez mogućeg BOM znaka (relevantno ako CSVFormat nije dobro očistio)
-        // i ignoriraj velika/mala slova iteriranjem kroz ključeve mape.
-        // Međutim, CSVParser s .setIgnoreHeaderCase(true) bi trebao ovo riješiti na razini parsiranja.
-        if (value == null && key != null) {
-            // Ako setIgnoreHeaderCase radi, ova dodatna provjera možda nije nužna.
-            // Ostavljam je kao dodatnu sigurnost, ali idealno je da CSVParser vrati konzistentne ključeve.
-            for (Map.Entry<String, String> entry : map.entrySet()) {
-                if (key.equalsIgnoreCase(entry.getKey().replace("\uFEFF", ""))) {
-                    value = entry.getValue();
-                    break;
-                }
-            }
-        }
-        return value != null ? value.trim() : "";
-    }
+        // Check initial state
+        Osoba osoba = csvDataLoader.centralniPopisOsoba.get("60000000001");
+        assertNotNull(osoba);
+        assertEquals("Prvo Ime", osoba.getIme());
+        assertEquals("", osoba.getPrezime());
+        assertEquals("", osoba.getDatumRodjenja());
 
-    private void kreirajCentralniPopisOsoba() {
-        // Iz Matice Rođenih
-        for (MaticaRodenihEntry entry : maticaRodenihEntries) {
-            dodajOsobuUPopis(entry.getOibDjeteta(), entry.getImeDjeteta(), entry.getPrezimeDjeteta(), entry.getSpolDjeteta(), entry.getDatumRodjenjaDjeteta(), "");
-            dodajOsobuUPopis(entry.getOibMajke(), entry.getImeMajke(), entry.getPrezimeMajke(), "Ž", "", "");
-            dodajOsobuUPopis(entry.getOibOca(), entry.getImeOca(), entry.getPrezimeOca(), "M", "", "");
-        }
-        // Iz Matice Vjenčanih - KORISTITE TOČNE NAZIVE STUPACA IZ VAŠE DATOTEKE!
-        for (Map<String, String> row : maticaVjencanihData) {
-            dodajOsobuUPopis(getSafeMap(row,"OIB muža"), getSafeMap(row,"Ime muža"), getSafeMap(row,"Prezime muža"), "M", getSafeMap(row,"Datum rođenja muža"), "");
-            dodajOsobuUPopis(getSafeMap(row,"OIB žene"), getSafeMap(row,"Ime žene"), getSafeMap(row,"Prezime žene"), "Ž", getSafeMap(row,"Datum rođenja žene"), "");
-        }
-        // Registar živ. partnerstva (spojeno) - KORISTITE TOČNE NAZIVE STUPACA!
-        for (Map<String, String> row : registarZivPartnerstvaData) {
-            dodajOsobuUPopis(getSafeMap(row,"OIB partnera 1"), getSafeMap(row,"Ime partnera 1"), getSafeMap(row,"Prezime partnera 1"), getSafeMap(row,"Spol partnera 1"), getSafeMap(row,"Datum rođenja partnera 1"), "");
-            dodajOsobuUPopis(getSafeMap(row,"OIB partnera 2"), getSafeMap(row,"Ime partnera 2"), getSafeMap(row,"Prezime partnera 2"), getSafeMap(row,"Spol partnera 2"), getSafeMap(row,"Datum rođenja partnera 2"), "");
-        }
-        // Izjava o izvanbračnoj zajednici - KORISTITE TOČNE NAZIVE STUPACA!
-        for (Map<String, String> row : izjavaIzvanbrZajData) {
-            dodajOsobuUPopis(getSafeMap(row,"OIB partnera 1"), getSafeMap(row,"Ime partnera 1"), getSafeMap(row,"Prezime partnera 1"), getSafeMap(row,"Spol partnera 1"), getSafeMap(row,"Datum rođenja partnera 1"), "");
-            dodajOsobuUPopis(getSafeMap(row,"OIB partnera 2"), getSafeMap(row,"Ime partnera 2"), getSafeMap(row,"Prezime partnera 2"), getSafeMap(row,"Spol partnera 2"), getSafeMap(row,"Datum rođenja partnera 2"), "");
-        }
-        // Stranci - KORISTITE TOČNE NAZIVE STUPACA!
-        for (Map<String, String> row : stranciData) {
-            dodajOsobuUPopis(getSafeMap(row,"OIB stranca"), getSafeMap(row,"Ime"), getSafeMap(row,"Prezime"), getSafeMap(row,"Spol"), getSafeMap(row,"Datum rođenja"), "");
-        }
+        // Clear maticaRodenihEntries and add new data for the same OIB from a different source (e.g. MaticaVjencanih)
+        csvDataLoader.maticaRodenihEntries.clear(); // Important to not re-add the first entry
+        csvDataLoader.centralniPopisOsoba.clear(); // Clear previous map to rebuild it
 
-        // Dodavanje datuma smrti - KORISTITE TOČNE NAZIVE STUPACA!
-        for (Map<String, String> umrliZapis : maticaUmrlihData) {
-            String oibUmrlog = getSafeMap(umrliZapis, "OIB umrlog");
-            if (!oibUmrlog.isEmpty() && centralniPopisOsoba.containsKey(oibUmrlog)) {
-                Osoba o = centralniPopisOsoba.get(oibUmrlog);
-                String datumSmrtiIzCsv = getSafeMap(umrliZapis, "Datum smrti");
-                if ((o.getDatumSmrti() == null || o.getDatumSmrti().isEmpty()) && !datumSmrtiIzCsv.isEmpty()) {
-                    o.setDatumSmrti(datumSmrtiIzCsv);
-                }
-            }
-        }
-    }
-
-    private void dodajOsobuUPopis(String oib, String ime, String prezime, String spol, String datumRodjenja, String datumSmrti) {
-        if (oib == null || oib.trim().isEmpty()) {
-            return;
-        }
-        String trimmedOib = oib.trim();
-
-        centralniPopisOsoba.compute(trimmedOib, (key, existingOsoba) -> {
-            if (existingOsoba == null) {
-                return new Osoba(trimmedOib, ime, prezime, spol, datumRodjenja, datumSmrti);
-            } else {
-                // Ažuriraj samo ako je novo polje popunjeno, a staro nije (ili je prazno)
-                if ((existingOsoba.getIme() == null || existingOsoba.getIme().isEmpty()) && ime != null && !ime.isEmpty()) existingOsoba.setIme(ime);
-                if ((existingOsoba.getPrezime() == null || existingOsoba.getPrezime().isEmpty()) && prezime != null && !prezime.isEmpty()) existingOsoba.setPrezime(prezime);
-
-                String existingSpol = existingOsoba.getSpol();
-                String newSpol = (spol != null && !spol.isEmpty()) ? spol.toUpperCase().trim() : null; // Osiguraj da je trimovano i veliko slovo
-
-                // Ažuriraj spol ako je novi M ili Ž, a stari nije, ili ako je stari prazan
-                if (newSpol != null && (Arrays.asList("M", "Ž").contains(newSpol)) &&
-                    (existingSpol == null || existingSpol.isEmpty() || !Arrays.asList("M", "Ž").contains(existingSpol))) {
-                    existingOsoba.setSpol(newSpol);
-                } else if ((existingSpol == null || existingSpol.isEmpty()) && newSpol != null) { // Ako je postojeći prazan, a novi ima bilo kakvu vrijednost
-                     existingOsoba.setSpol(spol.trim().toUpperCase()); // Koristi originalnu vrijednost (trim & uppercase)
-                }
+        Map<String, String> newData = new HashMap<>();
+        newData.put("OIB muža", "60000000001"); // Same OIB
+        newData.put("Ime muža", "Novo Ime"); 
+        newData.put("Prezime muža", "Novo Prezime"); 
+        newData.put("Datum rođenja muža", "01.01.1999"); 
+        csvDataLoader.maticaVjencanihData.add(newData);
+        
+        // Add the original entry again to simulate it coming from MaticaRodenih
+        // This is to ensure the "Prvo Ime" is established in the map first if it were processed first.
+        // However, to test the update logic properly, we should have the initial state set,
+        // then process new data. So, let's put the original data back to ensure it's "existing".
+         csvDataLoader.maticaRodenihEntries.add(new MaticaRodenihEntry(
+                "60000000001", "Prvo Ime", "", "M", "", 
+                null, null, null, null, null, null
+        ));
 
 
-                if ((existingOsoba.getDatumRodjenja() == null || existingOsoba.getDatumRodjenja().isEmpty()) && datumRodjenja != null && !datumRodjenja.isEmpty()) existingOsoba.setDatumRodjenja(datumRodjenja);
-                if ((existingOsoba.getDatumSmrti() == null || existingOsoba.getDatumSmrti().isEmpty()) && datumSmrti != null && !datumSmrti.isEmpty()) existingOsoba.setDatumSmrti(datumSmrti);
-                return existingOsoba;
-            }
-        });
+        // 2. Action
+        csvDataLoader.loadAllData(); // This will process maticaRodenih (again) then maticaVjencanih
+
+        // 3. Assertions
+        Osoba updatedOsoba = csvDataLoader.centralniPopisOsoba.get("60000000001");
+        assertNotNull(updatedOsoba);
+        
+        // Current CsvDataLoader.dodajOsobuUPopis logic:
+        // Updates field if (existing is null or empty) AND (new is not null and not empty)
+        // For Spol, it's more complex but generally prefers valid new "M" or "Ž" over invalid/empty existing.
+        assertEquals("Prvo Ime", updatedOsoba.getIme(), 
+            "Ime should be 'Prvo Ime' because MaticaRodenih is processed first, and existing non-empty fields are not overwritten by later non-empty fields from MaticaVjencanih.");
+        assertEquals("Novo Prezime", updatedOsoba.getPrezime(), 
+            "Prezime should be 'Novo Prezime' because it was initially empty and MaticaVjencanih provided a value.");
+        assertEquals("M", updatedOsoba.getSpol());
+        assertEquals("01.01.1999", updatedOsoba.getDatumRodjenja(), 
+            "Datum rođenja should be '01.01.1999' as it was initially empty and MaticaVjencanih provided a value.");
     }
 }
