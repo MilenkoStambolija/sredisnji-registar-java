@@ -1,0 +1,7 @@
+hr\srsveze\sredisnji_registar\controller\VezaController.class
+hr\srsveze\sredisnji_registar\model\Osoba.class
+hr\srsveze\sredisnji_registar\service\CsvDataLoader.class
+hr\srsveze\sredisnji_registar\model\VezaDTO.class
+hr\srsveze\sredisnji_registar\SredisnjiRegistarApplication.class
+hr\srsveze\sredisnji_registar\model\MaticaRodenihEntry.class
+hr\srsveze\sredisnji_registar\service\VezaService.class

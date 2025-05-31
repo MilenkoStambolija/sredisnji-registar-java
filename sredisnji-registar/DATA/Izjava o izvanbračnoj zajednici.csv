@@ -1,0 +1,5 @@
+OIB osobe;Ime;Prezime;OIB izvanbraènog druga;Ime izvanbraènog druga;Prezime izvanbraènog druga;Datum sklapanja izvanbraène zajednice;Prestanak izvanbraène zajednice;Prestanak izvanbraène zajednice - naèin prestanka;Prestanak izvanbraène zajednice - datum dogaðaja;Prestanak izvanbraène zajednice - datum upisa dogaðaja
+10000000050;Kristijan;Juriæ;10000000060;Valentina;Periæ;2019-10-04;3;raskid;2025-02-13;2025-02-15
+10000000082;Luka;Mariæ;10000000094;Mila;Novak;2019-10-19;NULL;NULL;NULL;NULL
+10000000084;Fran;Mariæ;10000000095;Stela;Novak;2020-01-30;NULL;NULL;NULL;NULL
+10000000086;Jakov;Mariæ;10000000096;Ema;Novak;2019-12-25;NULL;NULL;NULL;NULL
