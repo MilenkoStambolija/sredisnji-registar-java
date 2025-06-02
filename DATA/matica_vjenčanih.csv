@@ -1,0 +1,44 @@
+OIB osobe;Ime;Prezime;OIB bračnog druga;Ime bračnog druga;Prezime bračnog druga;Datum sklapanja braka;Prestanak braka;Prestanak braka - način prestanka;Prestanak braka - datum događaja;Prestanak braka - datum upisa događaja
+10000000002;Ivan;Petrović;10000000001;Ana;Petrović;5.10.1949;;;;
+10000000004;Stjepan;Kovač;10000000003;Ivka;Kovač;8.5.1947;;;;
+10000000006;Marko;Kovač;10000000005;Marija;Kovač;15.10.1949;1;smrt bračnog druga;2025-20-01;2025-22-01
+10000000007;Luka;Kovač;10000000019;Ivana;Horvat;23.7.1999;;;;
+10000000008;Ante;Kovač;10000000020;Jadranka;Horvat;30.1.1999;;;;
+10000000009;Ivan;Kovač;10000000021;Tatjana;Horvat;22.5.2000;;;;
+10000000010;Robert;Kovač;10000000022;Mila;Tomljenović;23.8.2019;;;;
+10000000012;David;Kovač;10000000023;Stela;Tomljenović;30.1.2020;;;;
+10000000014;Damir;Kovač;10000000024;Ema;Tomljenović;16.9.2019;;;;
+10000000026;Josip;Novak;10000000025;Barbara;Novak;22.7.1949;;;;
+10000000028;Franjo;Horvat;10000000027;Kata;Horvat;10.5.1948;;;;
+10000000030;Stjepan;Horvat;10000000029;Marica;Horvat;2.8.1974;;;;
+10000000032;Milan;Radić;10000000031;Ana;Radić;26.9.1951;;;;
+10000000034;Zvonko;Tomljenović;10000000033;Ruža;Tomljenović;5.10.1949;;;;
+10000000036;Mirko;Tomljenović;10000000035;Jelena;Tomljenović;15.9.1972;;;;
+10000000038;Tomislav;Babić;10000000037;Mia;Babić;29.8.1949;;;;
+10000000040;Marko;Jurić;10000000039;Jelena;Jurić;20.2.1947;;;;
+10000000042;Luka;Jurić;10000000041;Laura;Jurić;27.9.1974;1;smrt bračnog druga;2024-20-01;2024-22-01
+10000000043;Matej;Jurić;10000000055;Marija;Vuković;17.8.1999;;;;
+10000000044;Filip;Jurić;10000000056;Tena;Vuković;30.12.1998;;;;
+10000000045;Tomislav;Jurić;10000000057;Lorena;Vuković;4.6.2009;;;;
+10000000046;Ivan;Jurić;10000000058;Lana;Perić;4.10.2019;3;razvod;11.11.2021;13.11.2021
+10000000048;Nikola;Jurić;10000000059;Nika;Perić;17.1.2020;;;;
+10000000062;Petar;Knežević;10000000061;Katarina;Knežević;4.8.1949;;;;
+10000000064;Stjepan;Vuković;10000000063;Ana;Vuković;21.3.1948;;;;
+10000000066;Marko;Vuković;10000000065;Ivana;Vuković;7.7.1975;;;;
+10000000068;Boris;Šimić;10000000067;Mia;Šimić;29.9.1951;;;;
+10000000070;Robert;Perić;10000000069;Zrinka;Perić;6.11.1949;;;;
+10000000072;David;Perić;10000000071;Karla;Perić;29.9.1974;;;;
+10000000074;Marin;Lovrić;10000000073;Nina;Lovrić;10.11.1949;;;;
+10000000076;Dario;Marić;10000000075;Lucija;Marić;4.3.1947;;;;
+10000000078;Ivan;Marić;10000000077;Petra;Marić;9.11.1974;2;proglašenje nestalog bračnog druga umrlim;2024-20-07;2024-22-07
+10000000079;Domagoj;Marić;10000000091;Marica;Franjić;19.8.1999;;;;
+10000000080;Mate;Marić;10000000092;Jadranka;Franjić;30.1.2004;;;;
+10000000081;Luka;Marić;10000000093;Tatjana;Franjić;7.10.2009;;;;
+10000000098;Josip;Petrović;10000000097;Barbara;Petrović;22.7.1949;;;;
+10000000100;Franjo;Franjić;10000000099;Kata;Franjić;10.5.1948;;;;
+10000000102;Dario;Franjić;10000000101;Marica;Franjić;2.8.1975;;;;
+10000000104;Milan;Horvat;10000000103;Nina;Horvat;12.10.1951;;;;
+10000000106;Zvonko;Novak;10000000105;Ruža;Novak;28.11.1949;;;;
+10000000108;Mirko;Novak;10000000107;Jelena;Novak;12.10.1974;;;;
+10000000015;Danijel;Kovač;10000000115;Radmila;Đorđević;20.5.2025;;;;
+10000000113;Stribor ;Tomljenović;10000000114;Marina;Franjić;16.1.2000;;;;
