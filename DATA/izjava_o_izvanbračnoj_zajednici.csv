@@ -1,5 +1,0 @@
-OIB osobe;Ime;Prezime;OIB izvanbračnog druga;Ime izvanbračnog druga;Prezime izvanbračnog druga;Datum sklapanja izvanbračne zajednice;Prestanak izvanbračne zajednice;Prestanak izvanbračne zajednice - način prestanka;Prestanak izvanbračne zajednice - datum događaja;Prestanak izvanbračne zajednice - datum upisa događaja
-10000000050;Kristijan;Jurić;10000000060;Valentina;Perić;2019-10-04;3;raskid;2025-02-13;2025-02-15
-10000000082;Luka;Marić;10000000094;Mila;Novak;2019-10-19;NULL;NULL;NULL;NULL
-10000000084;Fran;Marić;10000000095;Stela;Novak;2020-01-30;NULL;NULL;NULL;NULL
-10000000086;Jakov;Marić;10000000096;Ema;Novak;2019-12-25;NULL;NULL;NULL;NULL
