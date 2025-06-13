@@ -1,0 +1,515 @@
+HRVATSKI SABOR
+
+856
+
+Na temelju članka 89. Ustava Republike Hrvatske, donosim
+
+ODLUKU
+
+O PROGLAŠENJU ZAKONA O SREDIŠNJEM REGISTRU STANOVNIŠTVA
+
+Proglašavam Zakon o Središnjem registru stanovništva, koji je Hrvatski sabor donio na sjednici 28. ožujka 2025.
+
+Klasa: 011-02/25-02/31
+Urbroj: 71-10-01/1-25-2
+Zagreb, 4. travnja 2025.
+
+Predsjednik
+Republike Hrvatske
+Zoran Milanović, v. r.
+
+ZAKON
+
+O SREDIŠNJEM REGISTRU STANOVNIŠTVA
+
+GLAVA I.
+OPĆE ODREDBE
+
+Predmet uređenja
+
+Članak 1.
+
+Ovim Zakonom ustrojava se Središnji registar stanovništva (u daljnjem tekstu: Središnji registar) i propisuje se način vođenja, preuzimanje, prikupljanje i korištenje podataka te druga pitanja od važnosti za uspostavu i funkcioniranje Središnjeg registra.
+
+Obuhvat Središnjeg registra
+
+Članak 2.
+
+Središnji registar elektronički je vođena službena evidencija koja sadrži podatke o broju i prostornom rasporedu stanovnika na području Republike Hrvatske prema socijalnim, ekonomskim, obrazovnim, migracijskim, stambenim i ostalim obilježjima, te sadrži podatke o srodstvu i podatke o kućanstvima.
+
+Primjena Zakona
+
+Članak 3.
+
+Podaci iz Središnjeg registra koriste se za ostvarivanje socijalnih i drugih prava, provođenje statističkih, društvenih, ekonomskih i drugih istraživanja, obradu podataka za koju postoji pravna osnova te za učinkovito vođenje upravnih, poreznih i drugih postupaka korisnika određenih ovim Zakonom.
+
+Načelo zaštite osobnih podataka
+
+Članak 4.
+
+Prikupljanje i obrada osobnih podataka u Središnjem registru provodi se sukladno propisima kojima se uređuje zaštita osobnih podataka.
+
+Načelo povjerenja i točnosti
+
+Članak 5.
+
+Podaci upisani u Središnji registar preuzimanjem podataka iz službenih evidencija te ostali podaci upisani prikupljanjem podataka prema odredbama ovoga Zakona smatraju se istinitim i potpunim za vođenje postupaka te za provedbu istraživanja.
+
+Pojmovnik
+
+Članak 6.
+
+Pojmovi u smislu ovoga Zakona imaju sljedeće značenje:
+
+1. generiranje je postupak stvaranja određenog podatka korištenjem drugih podataka sadržanih u Središnjem registru u skladu s odredbama ovoga Zakona
+
+2. identifikacijska oznaka kućanstva je identifikacijska oznaka stambene jedinice, određena prema propisu kojim se uređuje upravljanje i održavanje zgrada
+
+3. institucionalno kućanstvo je kućanstvo kojem pripadaju ciljane skupine osoba čije potrebe u pogledu stambenog prostora i troškova života zadovoljava pravna ili fizička osoba pružanjem usluge smještaja i organiziranog stanovanja te ostalih usluga
+
+4. izjava koju izjavljuje osoba, na koju se podaci odnose, smatra se osnovom za upis podataka u Središnji registar za činjenice koje se ne mogu preuzeti iz izvora podataka u skladu s odredbama ovoga Zakona
+
+5. izvori podataka su službene evidencije koje nadležna tijela vode prema posebnim propisima, iz kojih se podaci preuzimaju u Središnji registar
+
+6. kvaliteta stanovanja su podaci o prostorijama u stambenoj jedinici, načinu grijanja i vrsti energenta, klima-uređajima, dizalima i infrastrukturi, i to: vodovodu, kanalizaciji, električnoj energiji, plinskoj instalaciji
+
+7. korisnici podataka koji koriste podatke iz Središnjeg registra, u skladu s nadležnostima propisanim posebnim propisima, smatraju se tijela državne uprave, druga državna tijela, pravosudna tijela, jedinice lokalne i područne (regionalne) samouprave, pravne osobe koje se dijelom financiraju, izravno ili neizravno, iz sredstava proračuna ili kojima su osnivači odnosno jedan od osnivača Republika Hrvatska ili jedinice lokalne i područne (regionalne) samouprave te pravne osobe s javnim ovlastima
+
+8. kućanstvo čine osobe koje zajedno žive u istom prostoru, privređuju i troše, osim ako ovim Zakonom nije drukčije uređeno
+
+9. prostorni raspored stanovnika je raspored stanovnika prema Registru prostornih jedinica koji vodi Državna geodetska uprava
+
+10. srodstvo je povezanost jednoznačno određene osobe putem osobnog identifikacijskog broja s djecom, bračnim drugom, izvanbračnim drugom, životnim partnerom, neformalnim životnim partnerom, roditeljima, bakama i djedovima te braćom i sestrama, putem njihova osobnog identifikacijskog broja
+
+11. stambena jedinica je obiteljska kuća ili stan na kojem se u skladu s posebnim propisima može prijaviti prebivalište ili boravište.
+
+Rodna neutralnost
+
+Članak 7.
+
+Izrazi koji se koriste u ovome Zakonu, a imaju rodno značenje odnose se jednako na muški i ženski rod.
+
+GLAVA II.
+VOĐENJE, SADRŽAJ I UPIS PODATAKA U SREDIŠNJI REGISTAR
+
+Nadležno tijelo
+
+Članak 8.
+
+(1) Središnji registar uspostavlja i vodi Ministarstvo financija, Porezna uprava (u daljnjem tekstu: Porezna uprava).
+
+(2) Podaci se u Središnji registar upisuju preuzimanjem podataka iz izvora podataka navedenih u članku 10. stavcima 2. i 3. ovoga Zakona te prikupljanjem podataka na temelju izjava u slučajevima utvrđenim ovim Zakonom.
+
+Pojam stanovnika
+
+Članak 9.
+
+(1) U Središnji registar upisuju se podaci o stanovništvu, i to:
+
+– o hrvatskim državljanima s prebivalištem ili boravištem u Republici Hrvatskoj prema podacima iz Zbirke podataka o prebivalištu i boravištu tijela državne uprave nadležnog za unutarnje poslove i
+
+– o strancima koji u Republici Hrvatskoj imaju prebivalište ili boravište prijavljeno u skladu s odredbama posebnih propisa o strancima iz zbirki podataka tijela državne uprave nadležnog za unutarnje poslove.
+
+(2) Osim podataka o stanovništvu iz stavka 1. ovoga članka, Središnji registar sadrži podatke o hrvatskim državljanima izvan Republike Hrvatske.
+
+(3) Podaci o hrvatskim državljanima iz stavka 2. ovoga članka preuzimaju se iz evidencije o državljanstvu tijela državne uprave nadležnog za upravu, a podaci o njihovu prebivalištu u inozemstvu preuzimaju se iz Zbirke podataka o prebivalištu i boravištu tijela državne uprave nadležnog za unutarnje poslove, ako takav podatak postoji.
+
+(4) Osobe se upisuju u Središnji registar iz stavaka 1. i 2. ovoga članka pod uvjetom da imaju određen i dodijeljen osobni identifikacijski broj u skladu s odredbama propisa o osobnom identifikacijskom broju.
+
+(5) Iznimno od stavka 1. ovoga članka, u Središnji registar će se u dijelu podataka stanovnika, za potrebe utvrđivanja srodstva i kućanstva, upisivati i osobe koje se ne smatraju stanovnicima prema odredbama stavaka 1. i 2. ovoga članka ako im je određen i dodijeljen osobni identifikacijski broj.
+
+Sadržaj Središnjeg registra
+
+Članak 10.
+
+(1) Središnji registar sastoji se od općeg i posebnog dijela.
+
+(2) U opći dio Središnjeg registra upisuju se podaci o stanovništvu iz izvora podataka, i to:
+
+1. osobni identifikacijski broj i osobno ime – iz Evidencije o osobnim identifikacijskim brojevima Porezne uprave
+
+2. podaci o rođenju, smrti i državljanstvu osobe – iz državnih matica i evidencije o državljanstvu tijela državne uprave nadležnog za upravu i zbirki podataka tijela državne uprave nadležnog za unutarnje poslove
+
+3. podaci o braku ili životnom partnerstvu – iz državnih matica odnosno registra životnog partnerstva tijela državne uprave nadležnog za upravu
+
+4. podaci o roditeljima i djeci – iz državnih matica tijela državne uprave nadležnog za upravu
+
+5. podaci o osobama kojima je imenovan skrbnik ili poseban skrbnik i skrbništvu – iz Registra osoba pod skrbništvom i Registra osoba pod posebnim skrbništvom tijela državne uprave nadležnog za socijalnu skrb
+
+6. podaci o prebivalištu i boravištu – iz Zbirke podataka o prebivalištu i boravištu tijela državne uprave nadležnog za unutarnje poslove i
+
+7. podaci o invaliditetu – iz Registra osoba s invaliditetom zavoda nadležnog za javno zdravstvo.
+
+(3) U posebni dio Središnjeg registra upisuju se podaci o stanovništvu iz izvora podataka, i to:
+
+1. podaci o obrazovanju – iz Zajedničkog upisnika školskih ustanova u elektroničkom obliku (e-Matica) i Informacijskog sustava visokog učilišta tijela državne uprave nadležnog za znanost, obrazovanje i mlade i zbirki podataka tijela državne uprave nadležnog za unutarnje poslove za strane državljane koji se nisu školovali u Republici Hrvatskoj
+
+2. podaci o osnovi zdravstvenog osiguranja – iz Informacijskog sustava zavoda nadležnog za zdravstveno osiguranje
+
+3. podaci o osnovi mirovinskog osiguranja i podaci o umirovljenicima – iz Informacijskog sustava zavoda nadležnog za mirovinsko osiguranje i
+
+4. podaci o stambenoj jedinici i kvaliteti stanovanja – iz Informacijskog sustava Državne geodetske uprave.
+
+(4) U posebni dio Središnjeg registra mogu se upisati podaci o stanovništvu na temelju dobrovoljne izjave, i to:
+
+1. podaci o izvanbračnoj zajednici ili neformalnom životnom partnerstvu
+
+2. podaci o vjeri i materinskom jeziku
+
+3. podaci o nacionalnosti te
+
+4. podaci za kontakt.
+
+(5) Vlada Republike Hrvatske uredbom propisuje sadržaj podataka iz stavaka 2. i 3. ovoga članka.
+
+Upis podataka preuzimanjem u realnom vremenu
+
+Članak 11.
+
+(1) Podaci u opći dio Središnjeg registra iz članka 10. stavka 2. ovoga Zakona upisuju se elektroničkim putem, automatskim preuzimanjem podataka u realnom vremenu iz izvora podataka.
+
+(2) Voditelji izvora podataka iz stavka 1. ovoga članka dužni su osigurati da se svaka promjena i ispravak podataka dostavi u Središnji registar elektroničkim putem, automatskom razmjenom podataka u realnom vremenu.
+
+(3) Voditelji izvora podataka odgovorni su za točnost i pravodobnost dostave podataka u Središnji registar.
+
+Upis podataka preuzimanjem tromjesečno
+
+Članak 12.
+
+(1) Podaci u posebni dio Središnjeg registra iz članka 10. stavka 3. ovoga Zakona upisuju se preuzimanjem podataka iz izvora podataka najmanje jednom tromjesečno sa stanjem na zadnji dan svakog tromjesečja.
+
+(2) Podaci iz stavka 1. ovoga članka preuzimaju se u roku deset radnih dana od posljednjeg dana tromjesečja.
+
+(3) Voditelji izvora podataka dužni su omogućiti Poreznoj upravi točnost i pravodobnost preuzimanja podataka.
+
+(4) Iznimno od stavka 1. ovoga članka, podaci se mogu preuzeti sa stanjem na određeni dan ako postoji potreba određenog korisnika podataka za obradu podataka predviđenu ovim Zakonom i ako postoji drugi opravdani razlog zbog načina vođenja podataka iz izvora podataka.
+
+Upis podataka prikupljenih na temelju izjava
+
+Članak 13.
+
+(1) Podaci u posebni dio Središnjeg registra iz članka 10. stavka 4. ovoga Zakona upisuju se prikupljanjem podataka na temelju pisane izjave osobe na koju se ti podaci odnose.
+
+(2) Podnošenje izjava iz stavka 1. ovoga članka je dobrovoljno.
+
+(3) Izjava osobe iz stavka 1. ovoga članka može se podnijeti:
+
+1. korištenjem sustava e-Građani ili
+
+2. osobno u nadležnoj ispostavi Porezne uprave.
+
+(4) U slučaju nastanka promjene u odnosu na podatke upisane na temelju izjave, iz članka 10. stavka 4. točke 1. ovoga Zakona, u Središnji registar, osoba na koju se promjena odnosi dužna je promjenu podataka izjaviti u Središnji registar u roku od deset radnih dana od dana nastanka promjene.
+
+Upis podataka o izvanbračnoj zajednici ili neformalnom životnom partnerstvu
+
+Članak 14.
+
+(1) Upis ili promjena podatka o izvanbračnoj zajednici ili neformalnom životnom partnerstvu iz članka 10. stavka 4. točke 1. ovoga Zakona upisuje se uz obveznu suglasnost drugog izvanbračnog druga ili neformalnog životnog partnera.
+
+(2) Smatra se da je druga osoba suglasna ako u roku od deset radnih dana od dana davanja izjave prve osobe o upisu ili promjeni podataka o izvanbračnoj zajednici ili neformalnom životnom partnerstvu također da izjavu o istom statusu njihove izvanbračne zajednice ili neformalnog životnog partnerstva.
+
+(3) Ako izostane suglasnost u obliku iz stavka 2. ovoga članka, Porezna uprava obavijestit će izvanbračnog druga ili neformalnog životnog partnera o upisanoj ili promijenjenoj činjenici o izvanbračnoj zajednici ili neformalnom životnom partnerstvu, uz ostavljanje roka za davanje suglasnosti od 15 radnih dana.
+
+(4) Do isteka roka iz stavaka 2. i 3. ovoga članka upisani podatak o izvanbračnoj zajednici ili neformalnom životnom partnerstvu označuje se kao »podatak u provjeri«, dok se po isteku navedenog roka u slučaju izostanka suglasnosti briše upisani podatak o izvanbračnoj zajednici ili neformalnom životnom partnerstvu.
+
+(5) Porezna uprava ovlaštena je preispitati ispunjenje pretpostavke o postojanju izvanbračne zajednice ili neformalnog životnog partnerstva u skladu s propisima kojima se uređuju obiteljski odnosi odnosno životno partnerstvo za potrebe provedbe poreznih postupaka.
+
+(6) Iznimno od stavka 5. ovoga članka, upisom podataka o izvanbračnoj zajednici ili neformalnom životnom partnerstvu u Središnji registar ne smatra se utvrđenom činjenica izvanbračne zajednice ili neformalnog životnog partnerstva za vođenje postupaka utvrđenih sukladno propisima kojima se uređuju obiteljski odnosi odnosno životno partnerstvo, nego samo za svrhe propisane ovim Zakonom, potrebe Porezne uprave te za potrebe istraživanja.
+
+(7) Podatak o izvanbračnoj zajednici ili neformalnom životnom partnerstvu neće se upisati u Središnji registar ako izjavu daje osoba koja je već u braku ili životnom partnerstvu ili je s drugom osobom, u odnosu na koju daje izjavu, krvni srodnik u ravnoj liniji, a u pobočnoj lozi do četvrtog stupnja prema generiranim podacima o srodstvu u Središnjem registru te ako prema dostupnim podacima u Središnjem registru ne udovoljava drugim pretpostavkama za postojanje izvanbračne zajednice odnosno neformalnog životnog partnerstva sukladno propisima kojima se uređuju obiteljski odnosi odnosno životno partnerstvo.
+
+Ispravak upisanih podataka
+
+Članak 15.
+
+(1) Porezna uprava koordinira i kontrolira podatke i primjenu zajedničkih standarda.
+
+(2) Ako postoji sumnja u točnost podataka u Središnjem registru, Porezna uprava od izvora podataka može zatražiti provjeru upisanih podataka.
+
+(3) U slučaju iz stavka 2. ovoga članka voditelji izvora podataka dužni su provjeriti ispravnost upisanih podataka.
+
+(4) Do trenutka zaprimanja informacije o točnosti upisanog podatka od izvora podataka, podatak se označava kao »podatak u provjeri«.
+
+(5) Ispravak podataka provodi se preuzimanjem podataka iz izvora podataka.
+
+Generiranje institucionalnih kućanstava
+
+Članak 16.
+
+(1) Za potrebe generiranja institucionalnih kućanstava u Središnjem registru u skladu s potrebama statističkih istraživanja i obrada podataka, Porezna uprava ovlaštena je zatražiti podatke od tijela državne uprave i drugih pravnih i fizičkih osoba.
+
+(2) Porezna uprava zatražit će podatke iz stavka 1. ovoga članka od:
+
+1. tijela državne uprave nadležnog za poslove obrane – o osobama na dragovoljnom vojnom osposobljavanju, pripadnicima Oružanih snaga Republike Hrvatske polaznicima vojne izobrazbe koji su smješteni na vojnim lokacijama te drugim pripadnicima Oružanih snaga Republike Hrvatske koji stanuju na vojnim lokacijama
+
+2. tijela državne uprave nadležnog za poslove pravosuđa – o osobama na izdržavanju kazne zatvora, kazne maloljetničkog zatvora, kazne zatvora izrečene u prekršajnom postupku, supletorne kazne zatvora, mjere istražnog zatvora i mjere upućivanja u odgojni zavod
+
+3. tijela državne uprave nadležnog za unutarnje poslove – o osobama smještenim u objektima pod nadležnošću tog tijela
+
+4. pravnih i fizičkih osoba koje pružaju uslugu smještaja i organiziranog stanovanja prema posebnom propisu kojim se uređuje socijalna skrb – o djeci i odraslim osobama korisnicima usluge smještaja ili organiziranog stanovanja
+
+5. pravnih osoba koje pružaju smještaj učenicima – o osobama smještenim u učeničke domove
+
+6. pravnih osoba koje pružaju uslugu subvencioniranog stanovanja studenata – o osobama smještenim u studentske domove
+
+7. drugih institucija za smještaj osoba.
+
+Sadržaj podzakonskog propisa
+
+Članak 17.
+
+Ministar financija pravilnikom propisuje obvezne podatke sadržane u izjavi o izvanbračnoj zajednici ili neformalnom životnom partnerstvu, o vjeri i materinskom jeziku, o nacionalnosti i o podacima za kontakt iz članka 10. stavka 4. ovoga Zakona i sadržaj podataka o osobama smještenim u institucionalnim kućanstvima iz članka 16. ovoga Zakona.
+
+GLAVA III.
+VOĐENJE PODATAKA O SRODSTVU
+
+Podatak o srodstvu
+
+Članak 18.
+
+Za svaku osobu upisanu u Središnji registar generirat će se podaci o srodstvu.
+
+Generiranje srodstva
+
+Članak 19.
+
+(1) Generiranjem srodstva smatra se povezivanje jednoznačno određene osobe putem osobnog identifikacijskog broja s djecom, bračnim drugom, izvanbračnim drugom, životnim partnerom, neformalnim životnim partnerom, roditeljima, bakama i djedovima te braćom i sestrama, putem njihova osobnog identifikacijskog broja.
+
+(2) Generiranje srodstva provodi se u Središnjem registru preuzimanjem dostupnih podataka iz državnih matica odnosno registra životnog partnerstva u realnom vremenu.
+
+(3) Iznimno od stavka 2. ovoga članka, generiranje srodstva kod izvanbračnih drugova ili neformalnih životnih partnera provodi se na temelju dobrovoljnih izjava prema odredbama ovoga Zakona.
+
+GLAVA IV.
+VOĐENJE PODATAKA O KUĆANSTVU
+
+Podatak o kućanstvu
+
+Članak 20.
+
+(1) Pojedina osoba može, pod uvjetima propisanim za kućanstvo, biti član samo jednog kućanstva generiranog u Središnjem registru.
+
+(2) Odredbe stavka 1. ovoga članka ne odnose se na institucionalno kućanstvo.
+
+Podjela kućanstva
+
+Članak 21.
+
+(1) Kućanstvo može biti samačko ili višečlano.
+
+(2) Kućanstvo se smatra samačkim ako se sastoji od jednog člana.
+
+(3) Kućanstvo se smatra višečlanim ako se sastoji od dva ili više članova.
+
+Generiranje kućanstva
+
+Članak 22.
+
+(1) Generiranje podataka o kućanstvu provodi se u Središnjem registru po službenoj dužnosti pod pretpostavkama propisanim člankom 23. ovoga Zakona ili na temelju izjave o članovima kućanstva propisane člancima 24. i 25. ovoga Zakona.
+
+(2) Na temelju upisanih podataka o srodstvu u Središnjem registru se u realnom vremenu ažuriraju podaci o kućanstvima.
+
+Pretpostavka postojanja kućanstva
+
+Članak 23.
+
+(1) U smislu ovoga Zakona kućanstvo čine jedna osoba ili dvije osobe – par, koje su povezane kao bračni drugovi ili životni partneri ili izvanbračni drugovi ili neformalni životni partneri, zajedno s djecom ili bez djece pod uvjetom da nastanjuju istu ili dio iste stambene jedinice, privređuju i troše.
+
+(2) Članom kućanstva iz stavka 1. ovoga članka smatraju se djeca do prvog zaposlenja.
+
+Izjava o članovima kućanstva
+
+Članak 24.
+
+(1) Ako kućanstvo čine djeca nakon prvog zaposlenja i/ili skup osoba koji je širi od osoba određenih člankom 23. ovoga Zakona, osoba može u ime kućanstva podnijeti Izjavu o članovima kućanstva.
+
+(2) U slučaju iz stavka 1. ovoga članka, Porezna uprava obavijestit će ostale upisane punoljetne članove kućanstva o upisanoj činjenici pripadnosti određenom kućanstvu, uz ostavljanje roka za pobijanje tvrdnje o upisanoj činjenici od deset radnih dana.
+
+(3) Istekom roka iz stavka 2. ovoga članka smatrat će se da su druge osobe suglasne za upis činjenice o postojanju kućanstva u Središnji registar.
+
+(4) U razdoblju iz stavka 2. ovoga članka upisani podaci označuju se kao »podatak u provjeri«.
+
+Izjava o članovima kućanstva osoba koje ne nastanjuju istu stambenu jedinicu
+
+Članak 25.
+
+(1) Iznimno od članka 23. ovoga Zakona, članom kućanstva može se smatrati i osoba ili osobe koje ne nastanjuju istu stambenu jedinicu bez obzira na srodstvo, ako te osobe zajedno privređuju i troše.
+
+(2) U slučaju iz stavka 1. ovoga članka na odgovarajući način primjenjuju se odredbe članka 24. ovoga Zakona.
+
+Identifikacijska oznaka kućanstva
+
+Članak 26.
+
+(1) Svako kućanstvo određuje se jedinstveno, dodjelom identifikacijske oznake kućanstva u Središnjem registru.
+
+(2) Ako u istoj stambenoj jedinici ima više kućanstava, identifikacijsku oznaku kućanstva čini identifikacijska oznaka stambene jedinice kojoj se dodaje slijedni broj.
+
+Sadržaj podzakonskog propisa
+
+Članak 27.
+
+Ministar financija pravilnikom iz članka 17. ovoga Zakona propisuje sadržaj Izjave o članovima kućanstva iz članka 24. ovoga Zakona te način i pravila dodjele identifikacijskih oznaka kućanstava iz članka 26. ovoga Zakona.
+
+GLAVA V.
+PRISTUP PODACIMA I KORIŠTENJE PODATAKA U SREDIŠNJEM REGISTRU
+
+Pravo osoba upisanih u Središnji registar
+
+Članak 28.
+
+(1) Porezna uprava dužna je osobi upisanoj u Središnji registar omogućiti uvid u upisane podatke koji se na nju odnose ili se odnose na osobe kojima je zakonski zastupnik.
+
+(2) Na zahtjev upisane osobe Porezna uprava izdaje potvrdu o podacima upisanim u Središnji registar za tu osobu, bez naknade.
+
+(3) Potvrda o podacima upisanim u Središnji registar smatra se javnom ispravom.
+
+(4) Postupci iz stavaka 1. i 2. ovoga članka provode se na način propisan člankom 13. stavkom 3. ovoga Zakona.
+
+Povezivanje podataka iz Središnjeg registra s podacima Informacijskog sustava Porezne uprave
+
+Članak 29.
+
+(1) Porezna uprava ovlaštena je povezivati i obrađivati podatke iz Središnjeg registra s ostalim podacima sadržanim i dostupnim u evidencijama Informacijskog sustava Porezne uprave za provedbu poslova iz djelokruga Porezne uprave.
+
+(2) Porezna uprava ovlaštena je postupati na temelju stavka 1. ovoga članka za potrebe drugih korisnika podataka.
+
+Korištenje podataka iz Središnjeg registra
+
+Članak 30.
+
+(1) Podatke iz Središnjeg registra mogu koristiti bez naknade korisnici podataka za obavljanje poslova iz svoje nadležnosti, na temelju posebnih propisa.
+
+(2) Zbirne statističke pokazatelje mogu koristiti na zahtjev i druge pravne i fizičke osobe za namjenu navedenu u obrazloženom zahtjevu koji podnose Poreznoj upravi.
+
+Objava podataka iz Središnjeg registra
+
+Članak 31.
+
+Porezna uprava objavljuje godišnje zbirne statističke pokazatelje i podatke iz Središnjeg registra na svojim mrežnim stranicama.
+
+Način pristupa izvorima podataka
+
+Članak 32.
+
+(1) Porezna uprava uspostavlja vezu i pristup svim izvorima podataka potrebnim za vođenje Središnjeg registra preko središnjeg sustava interoperabilnosti.
+
+(2) Način kojim se osigurava veza i pristup izvorima podataka iz stavka 1. ovoga članka ostvaruje se sukladno odredbama propisa kojima se uređuje područje državne informacijske infrastrukture.
+
+Siguran pristup Središnjem registru i bazama podataka drugih registara i službenih evidencija
+
+Članak 33.
+
+(1) Korisnici podataka pristupaju Središnjem registru uporabom definiranih pristupnih veza bazama podataka koje određuje tijelo državne uprave nadležno za digitalnu transformaciju.
+
+(2) Prijava u Središnji registar obavlja se sukladno propisima kojima se uređuje područje državne informacijske infrastrukture.
+
+(3) Sustav autentifikacije mora biti uspostavljen tako da omogući prijavu vjerodajnicama koje su objavljene na listi prihvaćenih vjerodajnica u sustavu državne informacijske infrastrukture.
+
+Mjere sigurnosti izvora podataka i korisnika podataka
+
+Članak 34.
+
+Izvori podataka i korisnici podataka dužni su poduzeti mjere kojima se osigurava sigurna komunikacija sa Središnjim registrom u skladu s propisima o informacijskoj sigurnosti.
+
+Sigurnost podataka
+
+Članak 35.
+
+Porezna uprava obvezuje se unaprjeđivati, standardizirati i certificirati sustave i upravljanje sustavima sukladno najvišim standardima u tom području.
+
+Sadržaj podzakonskog propisa
+
+Članak 36.
+
+Ministar financija pravilnikom propisuje sadržaj potvrde o podacima iz Središnjeg registra iz članka 28. stavka 2. ovoga Zakona te svrhu, sadržaj i obuhvat pristupa podataka pojedinog korisnika podataka iz članka 30. stavka 1. ovoga Zakona.
+
+GLAVA VI.
+OSTALE ODREDBE
+
+Rok čuvanja
+
+Članak 37.
+
+(1) Podaci upisani u Središnji registar čuvaju se trajno.
+
+(2) Zahtjevi za pristup podacima te zahtjevi za upis i promjenu podataka u Središnjem registru čuvaju se šest godina.
+
+Obveze Državne geodetske uprave
+
+Članak 38.
+
+Državna geodetska uprava uspostavit će u svom informacijskom sustavu praćenje podataka o stambenim jedinicama i osigurati buduće praćenje podataka o kvaliteti stanovanja te osigurati dodjelu identifikacijskih oznaka stambenim jedinicama.
+
+Primjena drugih propisa
+
+Članak 39.
+
+Na postupke prema odredbama ovoga Zakona na odgovarajući način primjenjuje se propis o općem poreznom postupku.
+
+GLAVA VII.
+NADZOR
+
+Provedba nadzora
+
+Članak 40.
+
+Nadzor nad provedbom ovoga Zakona obavlja Ministarstvo financija.
+
+GLAVA VIII.
+PRIJELAZNE I ZAVRŠNE ODREDBE
+
+Rok za donošenje Uredbe o sadržaju podataka
+
+Članak 41.
+
+Vlada Republike Hrvatske će u roku od 60 dana od dana stupanja na snagu ovoga Zakona donijeti uredbu iz članka 10. stavka 5. ovoga Zakona.
+
+Rokovi za donošenje podzakonskih propisa
+
+Članak 42.
+
+Ministar financija će u roku od šest mjeseci od dana stupanja na snagu ovoga Zakona donijeti pravilnik iz članka 17. ovoga Zakona te pravilnik iz članka 36. ovoga Zakona u roku od šest mjeseci od dana stupanja na snagu članka 36. ovoga Zakona.
+
+Rokovi za preuzimanje podataka u Središnji registar
+
+Članak 43.
+
+(1) U roku od šest mjeseci od dana stupanja na snagu ovoga Zakona nadležna tijela odgovorna za izvore podataka, koja u trenutku stupanja na snagu ovoga Zakona raspolažu potrebnim podacima, obvezna su osigurati podatke za preuzimanje za potrebe Središnjeg registra.
+
+(2) U roku od 12 mjeseci od dana stupanja na snagu ovoga Zakona Središnji registar preuzet će podatke iz izvora podataka.
+
+Rok za uspostavu sustava od strane
+Državne geodetske uprave
+
+Članak 44.
+
+Državna geodetska uprava dužna je u roku od 12 mjeseci od dana stupanja na snagu ovoga Zakona uspostaviti sustav iz članka 38. ovoga Zakona.
+
+Prava pripadnika nacionalnih manjina
+
+Članak 45.
+
+(1) Sva prava hrvatskoga naroda i sva prava pripadnika nacionalnih manjina koja su uvjetovana utvrđenim udjelom u ukupnom broju stanovništva i brojem pripadnika nacionalnih manjina utvrđuju se na temelju službenih rezultata Popisa stanovništva iz 2021. godine do 31. prosinca 2033., a nakon toga datuma na temelju podataka iz Središnjeg registra stanovništva.
+
+(2) Središnji registar stanovništva će sa stanjem na dan 1. siječnja 2034. jednokratno preuzeti podatke o nacionalnosti iz Registra birača.
+
+Prava prema posebnim propisima
+
+Članak 46.
+
+Na temelju podataka iz Središnjeg registra stanovništva, dobivenih na temelju članaka 24. i 25. ovoga Zakona, prava utvrđena prema posebnim propisima korisnici podataka utvrđuju od 1. siječnja 2027.
+
+Stupanje na snagu Zakona
+
+Članak 47.
+
+Ovaj Zakon stupa na snagu osmoga dana od dana objave u »Narodnim novinama«, osim članaka 29. do 36. ovoga Zakona koji stupaju na snagu 1. siječnja 2026. i članaka 13., 24., 25. i 28. ovoga Zakona koji stupaju na snagu 1. lipnja 2026.
+
+Klasa: 022-02/24-01/49
+Zagreb, 28. ožujka 2025.
+
+HRVATSKI SABOR
+
+Predsjednik
+Hrvatskoga sabora
+Gordan Jandroković, v. r.
